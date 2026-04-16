@@ -26,7 +26,8 @@ and the operator itself will have to wait for the catalog source.
 ### Using cluster-wide install for the ACE operator
 
 The operator could be installed in a specific namespace, ideally using another variant 
-under the [ace-operator/variants](/ace-operator/variants/) directory.
+under the [ace-operator/variants](/ace-operator/variants/) directory. See https://www.ibm.com/docs/en/app-connect/13.0.x?topic=iaco-from-openshift-cli
+for more details on per-namespace setup.
 
 ### ArgoCD could run in another cluster
 
