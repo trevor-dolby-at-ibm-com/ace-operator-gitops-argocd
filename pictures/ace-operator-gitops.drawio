@@ -46,8 +46,8 @@
         <mxCell id="vnaijMY-gRnM1YcbJfZ2-30" edge="1" parent="vnaijMY-gRnM1YcbJfZ2-1" source="hQyTrkvb2I63jQtRQxud-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="vnaijMY-gRnM1YcbJfZ2-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hQyTrkvb2I63jQtRQxud-80" parent="vnaijMY-gRnM1YcbJfZ2-1" style="shape=image;html=1;verticalLabelPosition=middle;verticalAlign=middle;imageAspect=1;aspect=fixed;image=https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/argo-cd.svg;fontStyle=0;fontSize=16;labelPosition=right;align=left;" value="ArgoCD" vertex="1">
-          <mxGeometry height="54.64" width="42.5" x="30" y="65.36" as="geometry" />
+        <mxCell id="hQyTrkvb2I63jQtRQxud-80" parent="vnaijMY-gRnM1YcbJfZ2-1" style="shape=image;html=1;verticalLabelPosition=middle;verticalAlign=middle;imageAspect=1;aspect=fixed;image=https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/argo-cd.png;fontStyle=0;fontSize=16;labelPosition=right;align=left;" value="ArgoCD" vertex="1">
+          <mxGeometry height="55" width="43" x="30" y="65.36" as="geometry" />
         </mxCell>
         <mxCell id="vnaijMY-gRnM1YcbJfZ2-34" edge="1" parent="1" source="vnaijMY-gRnM1YcbJfZ2-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.998;exitY=0.126;exitDx=0;exitDy=0;exitPerimeter=0;" target="hQyTrkvb2I63jQtRQxud-80">
           <mxGeometry relative="1" as="geometry">
