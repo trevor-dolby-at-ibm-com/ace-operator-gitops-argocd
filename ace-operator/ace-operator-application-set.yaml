@@ -11,6 +11,7 @@ spec:
         application: ace-operator
       - environment: dev
         application: ace-dashboard
+      # More environments would be added here
   template:
     metadata:
       name: '{{application}}-{{environment}}'
@@ -18,8 +19,8 @@ spec:
       project: default
       source:
         repoURL: https://github.com/trevor-dolby-at-ibm-com/ace-operator-gitops-argocd.git
-        targetRevision: initial-projects
-        path: {{application}}/envs//{{environment}}
+        targetRevision: main
+        path: '{{application}}/envs/{{environment}}'
       destination:
         server: https://kubernetes.default.svc
       syncPolicy:
