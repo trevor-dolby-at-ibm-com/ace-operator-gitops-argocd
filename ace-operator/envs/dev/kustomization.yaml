@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - ../../base
 - ../../variants/cluster-wide
+- db-01-quickstart.yaml

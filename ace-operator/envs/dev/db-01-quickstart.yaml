@@ -1,0 +1,42 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Dashboard
+metadata:
+  name: db-01-quickstart
+  labels:
+    backup.appconnect.ibm.com/component: dashboard
+  namespace: cp4i
+spec:
+  license:
+    accept: true
+    license: L-CGSU-AUCFFB
+    use: AppConnectEnterpriseNonProductionFREE
+  pod:
+    containers:
+      content-server:
+        resources:
+          limits:
+            memory: 512Mi
+          requests:
+            cpu: 50m
+            memory: 50Mi
+      control-ui:
+        resources:
+          limits:
+            memory: 512Mi
+          requests:
+            cpu: 50m
+            memory: 125Mi
+  authentication:
+    integrationKeycloak:
+      enabled: false
+  authorization:
+    integrationKeycloak:
+      enabled: false
+  api:
+    enabled: true
+  storage:
+    size: 5Gi
+    type: ephemeral
+  replicas: 1
+  displayMode: IntegrationRuntimes
+  version: '13.0'
