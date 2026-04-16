@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: ace-operator
+  namespace: openshift-gitops
+spec:
+  generators:
+  - list:
+      elements:
+      - environment: dev
+        application: ace-operator
+      - environment: dev
+        application: ace-dashboard
+      # More environments would be added here
+  template:
+    metadata:
+      name: '{{application}}-{{environment}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/trevor-dolby-at-ibm-com/ace-operator-gitops-argocd.git
+        targetRevision: main
+        path: '{{application}}/envs/{{environment}}'
+      destination:
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - ApplyOutOfSyncOnly=true
+          - ServerSideApply=true
+          - Validate=false
+          - RespectIgnoreDifferences=true
