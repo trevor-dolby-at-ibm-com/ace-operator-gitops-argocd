@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cp4i-operator
+  namespace: openshift-gitops
+spec:
+  generators:
+  - list:
+      elements:
+      - environment: dev
+        application: cp4i-operator
+      # More environments would be added here
+  template:
+    metadata:
+      name: '{{application}}-{{environment}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/trevor-dolby-at-ibm-com/ace-operator-gitops-argocd.git
+        targetRevision: cp4i
+        path: '{{application}}/envs/{{environment}}'
+      destination:
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - ApplyOutOfSyncOnly=true
+          - ServerSideApply=true
+          - Validate=false
+          - RespectIgnoreDifferences=true

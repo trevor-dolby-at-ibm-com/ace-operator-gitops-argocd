@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ibm-appconnect-operator-catalog.yaml
+- ibm-integration-asset-repository-catalog.yaml
+- ibm-integration-platform-navigator-catalog.yaml
+#- ibmmq-operator-catalog.yaml
+#- integration-ibm-cloud-native-postgresql-catalog.yaml
+- opencloud-operators-catalog.yaml
