@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ibm-appconnect.yaml
+- ibm-automation-foundation-assets.yaml
+- ibm-cp-common-services.yaml
+- ibm-integration-platform-navigator.yaml

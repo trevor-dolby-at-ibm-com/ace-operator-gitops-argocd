@@ -3,4 +3,5 @@ kind: Kustomization
 
 resources:
 - ../../base
-- ../../variants/cluster-wide
+#- ../../variants/cluster-wide
+- ../../variants/other-namespace
