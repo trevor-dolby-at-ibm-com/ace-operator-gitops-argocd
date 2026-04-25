@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: ibm-integration-operatorgroup
+  namespace: cp4i
+  labels:
+    backup.integration.ibm.com/component: operatorgroup        
+spec:
+  targetNamespaces:
+  - cp4i

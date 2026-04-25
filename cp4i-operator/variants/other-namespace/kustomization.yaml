@@ -6,3 +6,4 @@ resources:
 - ibm-automation-foundation-assets.yaml
 - ibm-cp-common-services.yaml
 - ibm-integration-platform-navigator.yaml
+- operator-group.yaml
